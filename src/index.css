@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@media print {
+  #no-print {
+    display: none;
+  }
+
+  #print-area {
+    display: block;
+    width: 100vw;
+  }
+
+  #print-area>* {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  #print {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact;
+    /* For Chrome and Safari */
+    color-adjust: exact;
+    /* For Firefox */
+  }
+
+  #skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+
+
+
+.rsw-ce ul {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.rsw-ce ol {
+  list-style: decimal;
+  padding-left: 2em;
+}
+
+.text-xs.my-2 ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.text-xs.my-2 ol {
+  list-style: decimal;
+  padding-left: 1em;
+}
+
+#resume-print .resume-preview-class {
+  border: none !important;
+  padding: 20px;
+  padding-top: 15px !important;
+  box-shadow: none !important;
+}
+
+#resume-print .resume-preview-class .text-xl {
+  font-size: .6rem;
+}
+
+#resume-print .resume-preview-class .text-sm {
+  font-size: .4rem;
+}
+
+#resume-print .resume-preview-class .text-xs {
+  font-size: .3rem;
+}
+
+#resume-print .resume-preview-class .my-2 {
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+  border-width: 0;
+  border-top-width: 1px;
+}
+
+#resume-print .resume-preview-class .my-6 {
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+}
+
+#resume-print .resume-preview-class .my-6 h2 {
+  margin-bottom: .2rem;
+}
+
+#resume-print .resume-preview-class .my-5 {
+  margin-top: .2rem;
+}
+
+#resume-print .resume-preview-class .my-5 h2 {
+  margin-bottom: .2rem;
+}
+
+#resume-print .resume-preview-class .my-6 .my-5 {
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+}
+
+#resume-print .resume-preview-class p.text-xs,
+#resume-print .resume-preview-class h2,
+#resume-print .resume-preview-class .text-xs {
+  line-height: normal;
+}
+
+#resume-print .resume-preview-class .h-2 {
+  height: 0.1rem;
+}
+
+#resume-print .resume-preview-class .my-4 {
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+}
+
+#resume-print .text-xs {
+  margin-bottom: 0 !important;
+}
+
+#resume-print .resume-preview-class .grid {
+  column-gap: 3rem;
+}
+
+#resume-print .resume-preview-class .flex .w-\[120px\] {
+  width: 50px;
+}
+
+#resume-print #resume-preview-class.shadow-lg{
+  box-shadow: red !important;
+}
